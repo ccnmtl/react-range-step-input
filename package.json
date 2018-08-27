@@ -1,7 +1,7 @@
 {
   "name": "react-range-step-input",
   "version": "1.0.0",
-  "description": "An <input type=range> that steps up and down on click ",
+  "description": "An <input type=range> that steps up and down on click.",
   "main": "src/RangeStepInput.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,6 +12,9 @@
     "url": "git+https://github.com/nikolas/react-range-step-input.git"
   },
   "keywords": [
+    "react",
+    "range-input",
+    "science",
     "astronomy"
   ],
   "author": "Nikolas Nyby",

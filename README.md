@@ -1,6 +1,10 @@
 # react-range-step-input
 An &lt;input type=range> that steps up and down on click.
 
+## Demo
+
+See: https://compiled.ctl.columbia.edu/articles/a-range-input-for-scientific-applications/
+
 ## Installation
 
     npm install react-range-step-input

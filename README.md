@@ -1,4 +1,5 @@
-# react-range-step-input
+# react-range-step-input [![Build Status](https://travis-ci.org/nikolas/react-range-step-input.svg?branch=master)](https://travis-ci.org/nikolas/react-range-step-input)
+
 An &lt;input type=range> that steps up and down on click.
 
 ## Demo

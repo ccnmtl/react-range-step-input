@@ -15,7 +15,7 @@ export default class RangeStepInput extends React.Component {
         this.state = {
             isMouseDown: false,
             isDragging: false
-        }
+        };
         this.onInput = this.onInput.bind(this);
         this.onMouseDown = this.onMouseDown.bind(this);
         this.onMouseUp = this.onMouseUp.bind(this);

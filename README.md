@@ -1,10 +1,10 @@
 # react-range-step-input [![Build Status](https://travis-ci.org/nikolas/react-range-step-input.svg?branch=master)](https://travis-ci.org/nikolas/react-range-step-input)
 
-An &lt;input type=range> that steps up and down on click.
+An &lt;input type=range> that steps up and down on click, and provides other customizations. For more info, see: https://compiled.ctl.columbia.edu/articles/a-range-input-for-scientific-applications/
 
 ## Demo
 
-See: https://compiled.ctl.columbia.edu/articles/a-range-input-for-scientific-applications/
+https://nikolas.github.io/react-range-step-input/
 
 ## Installation
 

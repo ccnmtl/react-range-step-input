@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode=production",
+    "build-demo": "webpack --config webpack.config.docs.js --mode production",
     "eslint": "eslint lib/"
   },
   "repository": {

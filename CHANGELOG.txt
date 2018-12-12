@@ -1,4 +1,4 @@
-1.2.3
+1.2.3 (2018-12-12)
 ------------------
 * Some minor cleanup and bug fixes.
 

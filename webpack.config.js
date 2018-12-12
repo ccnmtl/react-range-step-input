@@ -2,11 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: './lib/demo.jsx',
-    mode: process.env.WEBPACK_SERVE ? 'development' : 'production',
+    entry: './lib/index.js',
     output: {
-        path: path.resolve(__dirname, 'docs/js'),
-        filename: 'bundle.js'
+        path: path.resolve(__dirname, 'build/'),
+        filename: 'index.js'
     },
     resolve: {
         extensions: ['*', '.js', '.jsx']

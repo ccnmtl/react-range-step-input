@@ -8,11 +8,11 @@ See: https://compiled.ctl.columbia.edu/articles/a-range-input-for-scientific-app
 
 ## Installation
 
-    npm install react-range-step-input
+    npm install --save react-range-step-input
     
 ## Usage
 
-    import RangeStepInput from 'react-range-step-input';
+    import {RangeStepInput} from 'react-range-step-input';
 
 In your `render()` method:
 

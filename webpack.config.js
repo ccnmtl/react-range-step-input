@@ -5,7 +5,8 @@ module.exports = {
     entry: './lib/index.js',
     output: {
         path: path.resolve(__dirname, 'build/'),
-        filename: 'index.js'
+        filename: 'index.js',
+        libraryTarget: 'commonjs'
     },
     resolve: {
         extensions: ['*', '.js', '.jsx']
@@ -16,7 +17,10 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 include: path.resolve(__dirname, 'lib'),
                 exclude: /node_modules/,
-                use: ['babel-loader']
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env', '@babel/preset-react']
+                }
             }
         ]
     }

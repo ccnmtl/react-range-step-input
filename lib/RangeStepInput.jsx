@@ -88,9 +88,9 @@ export default class RangeStepInput extends React.Component {
         const self = this;
 
         return setInterval(function() {
-            if (!self.state.isMouseDown) {
-                // The user isn't holding the cursor anymore: clean up
-                // and cancel.
+            if (!self.state.isMouseDown || self.state.isDragging) {
+                // The user isn't holding the cursor anymore, or the cursor
+                // is being dragged. Clean up and cancel.
                 if (self.holdLoop) {
                     clearInterval(self.holdLoop);
                 }

@@ -50,13 +50,16 @@ export default class RangeStepInput extends React.Component {
                 clearInterval(this.holdLoop);
             }
 
-            const oldVal = this.props.value;
+            let oldVal = this.props.value;
 
             const self = this;
-            // Add some initial delay on the click-hold functionality.
             setTimeout(function() {
+                if (self.holdLoop) {
+                    clearInterval(self.holdLoop);
+                }
                 self.holdLoop = self.makeHoldLoop(oldVal);
-            }, 600);
+            // Add some initial delay on the click-hold functionality.
+            }, 250);
         }
     }
     onMouseUp() {
@@ -91,9 +94,6 @@ export default class RangeStepInput extends React.Component {
     }
     makeHoldLoop(oldVal) {
         const self = this;
-        if (this.holdLoop) {
-            clearInterval(this.holdLoop);
-        }
 
         return setInterval(function() {
             if (!self.state.isMouseDown || self.state.isDragging) {
@@ -133,6 +133,7 @@ export default class RangeStepInput extends React.Component {
 
             // Trigger an onChange event.
             const e = new Event('change', {bubbles: true});
+
             return input.dispatchEvent(e);
         }, 100);
     }

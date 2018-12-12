@@ -1,3 +1,7 @@
+1.2.4 (2018-12-12)
+------------------
+* More click-hold bug fixes.
+
 1.2.3 (2018-12-12)
 ------------------
 * Some minor cleanup and bug fixes.

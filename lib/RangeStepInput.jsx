@@ -46,7 +46,12 @@ export default class RangeStepInput extends React.Component {
         this.setState({isMouseDown: true});
 
         if (this.props.hold) {
+            if (this.holdLoop) {
+                clearInterval(this.holdLoop);
+            }
+
             const oldVal = this.props.value;
+
             const self = this;
             // Add some initial delay on the click-hold functionality.
             setTimeout(function() {
@@ -70,7 +75,7 @@ export default class RangeStepInput extends React.Component {
         }
     }
     onInput(e) {
-        const step = forceNumber(e.target.step);
+        const step = this.props.step;
         const newVal = forceNumber(e.target.value);
         const oldVal = this.props.value;
 
@@ -86,6 +91,9 @@ export default class RangeStepInput extends React.Component {
     }
     makeHoldLoop(oldVal) {
         const self = this;
+        if (this.holdLoop) {
+            clearInterval(this.holdLoop);
+        }
 
         return setInterval(function() {
             if (!self.state.isMouseDown || self.state.isDragging) {
@@ -98,15 +106,21 @@ export default class RangeStepInput extends React.Component {
             }
 
             const input = self.domRef.current;
-
             let newVal = self.props.value;
-            if (oldVal > newVal) {
+
+            if (
+                oldVal > newVal &&
+                (newVal - self.props.step) >= self.props.min
+            ) {
                 newVal -= self.props.step;
-            } else if (oldVal < newVal) {
+            } else if (
+                oldVal < newVal &&
+                (newVal + self.props.step) <= self.props.max
+            ) {
                 newVal += self.props.step;
-            } else {
-                // The user is just holding the cursor at the current
-                // value, so don't do anything.
+            }
+
+            if (oldVal === newVal) {
                 return false;
             }
 

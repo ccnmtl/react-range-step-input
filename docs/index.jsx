@@ -20,11 +20,18 @@ class App extends React.Component {
     render() {
         return <div>
             <p>Here's an example RangeStepInput:</p>
-            <RangeStepInput
-                min={0} max={100}
-                value={this.state.value} step={1}
-                onChange={this.onChange.bind(this)}
-            />
+            <div className="input-group mb-3">
+                <RangeStepInput
+                    min={0} max={100}
+                    value={this.state.value} step={1}
+                    onChange={this.onChange.bind(this)}
+                />
+                <div className="input-group-append">
+                    <span className="input-group-text ml-2">
+                        {this.state.value}
+                    </span>
+                </div>
+            </div>
         </div>;
     };
     onChange(e) {

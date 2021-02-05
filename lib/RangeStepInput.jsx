@@ -34,6 +34,7 @@ export default class RangeStepInput extends React.Component {
                    value={this.props.value}
                    name={this.props.name}
                    id={this.props.id}
+                   style={this.props.style}
                    disabled={this.props.disabled}
                    onChange={this.props.onChange}
                    onMouseDown={this.onMouseDown}
@@ -149,6 +150,7 @@ RangeStepInput.propTypes = {
     id: PropTypes.string,
     name: PropTypes.string,
     disabled: PropTypes.bool,
+    style: PropTypes.string,
 
     // Determines whether the slider changes value when the cursor is
     // held on it.

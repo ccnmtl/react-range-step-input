@@ -17,7 +17,6 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 include: path.resolve(__dirname, 'lib'),
                 exclude: /node_modules/,
-                loader: 'babel-loader',
                 use: {
                     loader: 'babel-loader',
                     options: {

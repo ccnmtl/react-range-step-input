@@ -8,7 +8,8 @@
     "build": "webpack --mode=production",
     "build-demo": "webpack --config webpack.config.docs.js --mode production",
     "build-demo-dev": "webpack --config webpack.config.docs.js --mode development --watch",
-    "eslint": "eslint lib/"
+    "eslint": "eslint lib/",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -33,12 +34,15 @@
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.2.0",
-    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.0",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^26.6.3",
     "babel-loader": "^8.0.4",
     "eslint": "^7.21.0",
     "eslint-plugin-react": "^7.11.1",
+    "jest": "^26.6.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "webpack": "^5.24.2",
@@ -48,5 +52,8 @@
     "presets": [
       "@babel/react"
     ]
+  },
+  "dependencies": {
+    "enzyme": "^3.11.0"
   }
 }

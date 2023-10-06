@@ -1,6 +1,6 @@
 {
     "extends": ["eslint:recommended", "plugin:react/recommended"],
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module",
@@ -17,5 +17,10 @@
     },
     "rules": {
         "no-console": "off"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }

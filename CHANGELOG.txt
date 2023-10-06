@@ -1,4 +1,4 @@
-1.4.0
+1.4.0 (unreleased)
 ------------------
 * Updated to be compatible with React 18
 * Migrated from Travis to GitHub Actions for automated testing

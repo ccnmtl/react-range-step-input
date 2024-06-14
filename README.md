@@ -4,7 +4,7 @@ An &lt;input type=range> that steps up and down on click, and provides other cus
 
 ## Demo
 
-https://nikolas.github.io/react-range-step-input/
+https://ccnmtl.github.io/react-range-step-input/
 
 ## Installation
 

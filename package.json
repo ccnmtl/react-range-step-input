@@ -38,7 +38,7 @@
     "@babel/preset-react": "^7.12.13",
     "@cfaester/enzyme-adapter-react-18": "^0.8.0",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^29.7.0",
+    "babel-jest": "^30.0.0",
     "babel-loader": "^10.0.0",
     "eslint": "^9.8.0",
     "eslint-plugin-react": "^7.11.1",
